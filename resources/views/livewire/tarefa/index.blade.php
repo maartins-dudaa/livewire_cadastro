@@ -27,6 +27,9 @@
                                 <button class="btn btn-danger btn-sm" data-bs-toggle="modal"
                                     data-bs-target="#deleteModal"
                                     wire:click="AbrirModalExclusao({{ $t->id}})">Excluir</button>
+                                <!--Dentro do href estamos chamando a rota que colocamos o "name",
+                                e logo depois adicionando o atributo(id) -->
+                                    <a href="{{route('tarefa.editar', ['id' => $t->id])}}" class="btn btn-info btn-sm">Editar sem modal</a>
                             </td>
                         </tr>
                     @endforeach
